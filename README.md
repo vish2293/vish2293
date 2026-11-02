@@ -46,7 +46,6 @@ Every project is backed by automated tests, so it keeps working after launch.
 
 ## What I help businesses with
 
-| | |
 |:--|:--|
 | ⚙️ **Workflow & CRM automation** | Turn multi-step manual processes into one click, with checks that stop mistakes before they reach customers. |
 | 🤖 **AI on your documents and data** | Assistants that answer questions from contracts, reports and manuals, with every answer traceable to its page. |
