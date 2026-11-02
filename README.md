@@ -1,142 +1,174 @@
 <div align="center">
 
-```
-╭──────────────────────────────────────────────────────────────╮
-│ ✻ Welcome to Vimarsh's profile                               │
-│                                                              │
-│   /help for help, /case-studies to see what I've shipped     │
-│                                                              │
-│   cwd: ~/vish2293                                            │
-╰──────────────────────────────────────────────────────────────╯
-```
-
 # Vimarsh Rana
 
-**Engineer @ Webvoltz · Automation · AI Systems · Full-Stack**
+### Engineer at [Webvoltz](https://webvoltz.com) · Automation · AI Systems · Full-Stack
 
-I build systems that cut manual work and scale cleanly, from CRM automation to AI search and real-time computer vision.<br/>
-Surat, Gujarat, India
+**I build software that removes manual work and keeps up as a business grows, from CRM automation to AI search and real-time video analysis.**
+
+Surat, India · Working with clients worldwide
 
 <a href="https://www.linkedin.com/in/vimarshrana"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://webvoltz.com"><img src="https://img.shields.io/badge/Webvoltz-d77757?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
+<a href="https://webvoltz.com"><img src="https://img.shields.io/badge/Webvoltz-d77757?style=for-the-badge&logoColor=white"/></a>
 <a href="https://github.com/vish2293"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 </div>
 
-<br/>
+---
 
-## `> whoami`
+## About
 
-```console
-vimarsh@surat:~$ cat profile.json
-{
-  "role":       "Engineer @ Webvoltz",
-  "builds":     ["workflow automation", "AI over documents and the web", "real-time systems"],
-  "currently":  "Agentic retrieval, hybrid search and grounded LLM answers",
-  "habits":     ["tests against the real stack", "exactly-once over hopefully-once", "cite or cut"],
-  "principle":  "Problem first, stack second"
-}
-```
+I start with the business problem and pick the technology after. My work at Webvoltz covers three areas:
 
-## `> impact --summary`
+- **Automation** that takes repetitive tasks off your team, safely and without mistakes.
+- **AI over your own data**, with answers that show their sources instead of guessing.
+- **Real-time systems** that stay fast and accurate when many people use them at once.
+
+Every project is backed by automated tests, so it keeps working after launch.
+
+---
+
+## Results delivered
 
 <div align="center">
 
-| 🎟️ **15,000** | ⚡ **~2 frames** | 📦 **75.8 kB** | 🔁 **0** | 🚦 **8** |
+| **15,000** | **Instant** | **0** | **8** | **Every answer** |
 |:---:|:---:|:---:|:---:|:---:|
-| seats on one live map | click to paint | gzipped JS for the whole map | double sends, even on duplicate webhooks | gates checked before every text |
+| seats on one live ticketing map | response on every click (about 2 frames) | duplicate texts, even when the CRM sends events twice | safety checks before any customer is texted | linked to its source page in DocMind |
 
-| 🔫 **35–95 ms** | 🔍 **2.2×** | 📄 **50 → 5** | 🕸️ **0** | 🧪 **420+** |
+| **< 0.1 sec** | **2.2×** | **50 → 5** | **0** | **420+** |
 |:---:|:---:|:---:|:---:|:---:|
-| per CCTV frame on one GPU | pixels on distant weapons | passages reranked per answer | third-party search APIs in Websearch | tests across seating, CRM and DocMind |
+| to analyze each CCTV frame (35–95 ms) | sharper view of distant weapons | best passages picked per AI answer | third-party search APIs in Websearch | automated tests across seating, CRM and DocMind |
 
 </div>
 
-## `> ls case-studies/`
+---
 
-### 🎟️ [Event Seating Map](https://github.com/vish2293/event-seating-map-case-study): 15,000 seats, one live map
-<sub>`React 19` · `TypeScript` · `Zustand` · `SVG` · `Redis` · `PostgreSQL` · `WebSockets`</sub>
-
-- Ticketing seat map for a **15,000-seat venue** that stays responsive on every click and never shows two buyers the same seat.
-- **Section drill-in rendering**: the overview draws 66 SVG nodes, and only the open section's **1,500 seats** go live, so clicks paint in about 2 frames.
-- Live seat holds with on-time expiry and identical clash resolution for every buyer. Production design uses **Redis + Lua** for holds and **Postgres** as the final word on every sale.
-- Fully accessible: every seat is a real checkbox with a spoken label, plus keyboard navigation and a best-seats-for-a-party finder. **222 tests**.
-
-### 🔁 [CRM Automation](https://github.com/vish2293/crm-automation-case-study): one click in, the CRM does the rest
-<sub>`Node 22` · `TypeScript` · `Express` · `PostgreSQL` · `Drizzle` · `GoHighLevel API` · `React`</sub>
-
-- GoHighLevel integration for a reputation agency. Front-desk staff approve a customer with **one click**, and the system runs the whole review-request campaign.
-- **Eight send gates** before any text: grace period, send window, live DND, already-reviewed, frequency caps and a final re-check under a row lock.
-- **Postgres as queue and ledger**: workers claim jobs with `SKIP LOCKED`, retry with backoff, and a unique index allows one open campaign per phone.
-- Webhooks move each campaign forward **exactly once**, even when GHL delivers events twice. 11 triggers, 15 API methods, **141 tests**.
-
-### 📄 [DocMind](https://github.com/vish2293/docmind-case-study): long documents, answers you can check
-<sub>`Python` · `FastAPI` · `pgvector` · `Qwen3 embeddings` · `bge-reranker` · `Claude` · `SSE`</sub>
-
-- Q&A engine for contracts, reports and manuals. Every fact points to its page, and anything the document doesn't support is removed before you read it.
-- **Structure-aware indexing** that rebuilds each document's section tree, so chunks never lose their context.
-- **Effort fits the question**: a fast single pass, a bounded research agent (7 read-only tools, 8 steps), or an exhaustive parallel read of the whole document.
-- A second model checks every sentence against numbered evidence. Hybrid search reranks **50 candidates down to 5**.
-
-### 🕸️ [Websearch](https://github.com/vish2293/search-engine-case-study): our own crawler, our own index
-<sub>`Python` · `Scrapy` · `OpenSearch` · `PostgreSQL` · `bge-m3` · `FastAPI`</sub>
-
-- Independent AI search engine with **no third-party search API**: discovery, crawling, indexing and ranking are all in-house.
-- **Adaptive crawling** that learns how often each URL changes and spends the crawl budget where the news is.
-- **Hybrid keyword + semantic search** fused into one ranking, with an explanation for every result.
-- An AI answer layer that **can't cite what it didn't read**: unsupported citations are stripped while the answer streams.
-
-### 🔫 [Netram](https://github.com/vish2293/netram-weapon-detection-case-study): real-time weapon detection on CCTV
-<sub>`Python` · `FastAPI` · `YOLO` · `ByteTrack` · `PyTorch` · `CUDA` · `WebSockets`</sub>
-
-- Proof of concept that finds and tracks every person and gun in live CCTV footage.
-- **Two-pass detection**: a zoomed-in pass around each person gives distant guns about **2.2× the pixels**.
-- **35–95 ms per frame on one GPU**, with output delayed by exactly one second so every box lands on the frame it was found in.
-
-### 🗺️ [Map Solutions Guide](https://github.com/vish2293/map-solutions-guide-case-study): every decision has a where
-<sub>`Mapbox GL` · `Turf.js` · `PostGIS` · `SQL Server spatial` · `Vitest`</sub>
-
-- Capability guide for map products: drawn zones, grid cells, data-driven styling, address search, point-in-zone lookups and distance APIs.
-- Drawn from a reference project with **1,350+ tests**, for insurance, property, logistics and field teams.
-
-## `> cat skills.txt`
-
-<div align="center">
+## What I help businesses with
 
 | | |
 |:--|:--|
-| **Languages** | `TypeScript` `JavaScript` `Python` `SQL` |
-| **Frontend** | `React` `Zustand` `Redux Toolkit` `Tailwind CSS` `SVG` `Canvas` `Accessibility` |
-| **Backend** | `Node.js` `Express` `FastAPI` `WebSockets` `Server-Sent Events` `Webhooks` |
-| **Data** | `PostgreSQL` `pgvector` `PostGIS` `Redis` `OpenSearch` |
-| **AI & ML** | `RAG` `Hybrid Search` `Reranking` `Agents` `Claude` `YOLO` `ByteTrack` `PyTorch` |
-| **Integrations** | `GoHighLevel` `Mapbox` `Scrapy` |
-| **Delivery** | `Docker` `GitHub Actions` `GitLab CI` `Vitest` `pytest` |
+| ⚙️ **Workflow & CRM automation** | Turn multi-step manual processes into one click, with checks that stop mistakes before they reach customers. |
+| 🤖 **AI on your documents and data** | Assistants that answer questions from contracts, reports and manuals, with every answer traceable to its page. |
+| 🔍 **Search** | Search that understands meaning as well as keywords, built on your own index. |
+| 🎟️ **Real-time, high-traffic apps** | Booking and ticketing tools that stay fast and fair when many people act at the same moment. |
+| 🛡️ **Computer vision** | AI that watches video feeds and flags what matters, as it happens. |
+| 🗺️ **Location-based products** | Maps, zones and address lookups for insurance, property, logistics and field teams. |
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,react,tailwind,nodejs,express,fastapi,postgres,redis,pytorch,opencv,docker,githubactions,gitlab&perline=8" />
+---
 
-</div>
+## Selected client work
 
-## `> git log --stat`
+### 🎟️ [Event Seating Map](https://github.com/vish2293/event-seating-map-case-study): 15,000 seats, one live map
+
+**The challenge:** Ticket buyers in a large venue need to pick exact seats, and two people must never end up with the same seat.
+
+**What we delivered:**
+- A live seat map for a **15,000-seat venue** that responds instantly on every click.
+- Only the section a buyer opens is loaded in detail (**1,500 seats** at a time), which keeps it fast: the overview is just 66 shapes, and the whole map is a **75.8 kB** download.
+- Seat holds expire on time, every buyer sees other buyers' holds live, and clashes resolve the same way for everyone. A seat is **never sold twice**.
+- Fully accessible: works with screen readers and keyboard, plus a "best seats for my group" finder. Backed by **222 automated tests**.
+
+<sub>Built with React, TypeScript, Redis, PostgreSQL, WebSockets</sub>
+
+### 🔁 [CRM Review Automation](https://github.com/vish2293/crm-automation-case-study): one click in, the CRM does the rest
+
+**The challenge:** A reputation agency serving local clinics and service businesses had front-desk staff asking customers for reviews by hand.
+
+**What we delivered:**
+- Staff approve a happy customer with **one click**, and the system runs the full review-request campaign inside the client's GoHighLevel account.
+- **8 safety checks** before any text goes out: waiting period, allowed sending hours, opt-outs, customers who already reviewed, and frequency limits.
+- Every reply, click, opt-out and failure is tracked, and each one is processed **exactly once**, so no customer is ever texted twice.
+- A second integration sends new prospects straight into the agency's sales pipeline without creating duplicates. **11 automated triggers, 141 tests**.
+
+<sub>Built with Node.js, TypeScript, PostgreSQL, GoHighLevel API, React</sub>
+
+### 📄 [DocMind](https://github.com/vish2293/docmind-case-study): long documents, answers you can check
+
+**The challenge:** Teams lose hours searching long contracts, reports and manuals, and most AI tools give answers you can't verify.
+
+**What we delivered:**
+- Upload a document, ask a question in plain words, and get an answer where **every fact points to its page**.
+- It keeps the document's chapters and sections intact, so answers never lose their context.
+- Simple questions get a quick answer. Complex ones get a research agent that reads the right sections. "List every deadline" reads the whole document.
+- A second AI checks every sentence against the source and **removes anything the document doesn't support**.
+
+<sub>Built with Python, FastAPI, PostgreSQL (pgvector), Claude</sub>
+
+### 🕸️ [Websearch](https://github.com/vish2293/search-engine-case-study): our own crawler, our own index
+
+**The challenge:** Most AI products that search the web depend on someone else's search engine, so they can't control results, freshness or cost.
+
+**What we delivered:**
+- An independent AI search engine with **no third-party search API**. Finding, reading, indexing and ranking pages are all in-house.
+- Smart crawling that revisits fast-changing pages often and leaves static ones alone.
+- Search by keyword and by meaning combined, with an explanation of why each result ranks where it does.
+- AI answers that **can't cite pages they didn't read**.
+
+<sub>Built with Python, Scrapy, OpenSearch, PostgreSQL, FastAPI</sub>
+
+### 🛡️ [Netram](https://github.com/vish2293/netram-weapon-detection-case-study): real-time weapon detection on CCTV
+
+**The challenge:** CCTV networks have far more cameras than people to watch them.
+
+**What we delivered:**
+- A proof of concept that finds and tracks **every person and every gun** in live CCTV footage.
+- A second, zoomed-in look around each person gives distant weapons about **2.2× more detail**, so small guns aren't missed.
+- Analyzes each frame in **35–95 milliseconds** on a single GPU, with every alert drawn on exactly the right frame.
+
+<sub>Built with Python, YOLO, ByteTrack, PyTorch, FastAPI</sub>
+
+### 🗺️ [Map Solutions Guide](https://github.com/vish2293/map-solutions-guide-case-study): every decision has a where
+
+**The challenge:** Insurance, property, logistics and field teams need to make decisions based on location.
+
+**What we delivered:**
+- A practical guide to map features: drawing zones, colour-coding data, address search, "which zone is this in" lookups and distance tools.
+- Based on a real reference project backed by **1,350+ automated tests**.
+
+<sub>Built with Mapbox GL, Turf.js, PostGIS</sub>
+
+---
+
+## How I work
+
+- **Problem first, technology second.** I find the step that costs your team the most time or money, and fix that first.
+- **No silent failures.** Retries, safety checks and exactly-once processing, so nothing is lost and nothing happens twice.
+- **AI you can trust.** Answers come with sources, and anything unsupported is removed.
+- **Tested against the real thing.** Automated tests run on real databases and services, not just mock-ups.
+
+---
+
+## Technology
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=vish2293&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vish2293&layout=compact&theme=tokyonight&hide_border=true" height="165"/>
+| Area | Tools |
+|:--|:--|
+| **Web front end** | React · TypeScript · Tailwind CSS · Accessibility |
+| **Back end & APIs** | Node.js · Express · Python · FastAPI · WebSockets · Webhooks |
+| **Databases & search** | PostgreSQL · pgvector · PostGIS · Redis · OpenSearch |
+| **AI** | RAG · Hybrid search · AI agents · Claude · Computer vision (YOLO, PyTorch) |
+| **Integrations** | GoHighLevel · Mapbox |
+| **Delivery** | Docker · GitHub Actions · GitLab CI · Automated testing |
 
-<img src="https://streak-stats.demolab.com?user=vish2293&theme=tokyonight&hide_border=true" />
+<br/>
+
+<img src="https://skillicons.dev/icons?i=ts,react,tailwind,nodejs,express,py,fastapi,postgres,redis,pytorch,opencv,docker,githubactions,gitlab&perline=14" />
 
 </div>
 
-## `> contact --open`
-
-Got a process that eats your team's time, or a product that needs to scale? Let's talk.
-
-```console
-vimarsh@surat:~$ echo "Problem first, stack second."
-Problem first, stack second.
-```
+---
 
 <div align="center">
-<sub>✻ Engineered with care · Updated October 2026</sub>
+
+### Let's talk
+
+Got a process that eats your team's time, or a product that needs to scale?
+
+<a href="https://www.linkedin.com/in/vimarshrana"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://webvoltz.com"><img src="https://img.shields.io/badge/Work_with_Webvoltz-d77757?style=for-the-badge&logoColor=white"/></a>
+
+<sub>Updated November 2026</sub>
+
 </div>
